@@ -1,0 +1,431 @@
+[
+    {
+        "id": "5djmpehuiigg06b",
+        "name": "tunes",
+        "type": "base",
+        "system": false,
+        "schema": [
+            {
+                "id": "io2qgnvc",
+                "name": "author",
+                "type": "relation",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "collectionId": "systemprofiles0",
+                    "cascadeDelete": false
+                }
+            },
+            {
+                "id": "pkq4wfcj",
+                "name": "tuneId",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": true,
+                "options": {
+                    "min": 5,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "jcjunqhl",
+                "name": "signature",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 3,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "g9b17t9y",
+                "name": "vehicleName",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 2,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "w7qssd4t",
+                "name": "engineMake",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 2,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "h47ir1bi",
+                "name": "engineCode",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 2,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "frqzy24e",
+                "name": "displacement",
+                "type": "number",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 0,
+                    "max": 100
+                }
+            },
+            {
+                "id": "j1asw8n1",
+                "name": "cylindersCount",
+                "type": "number",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 0,
+                    "max": 16
+                }
+            },
+            {
+                "id": "0x8poyze",
+                "name": "aspiration",
+                "type": "select",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "values": [
+                        "na",
+                        "turbocharged",
+                        "supercharged"
+                    ]
+                }
+            },
+            {
+                "id": "ssd9iccu",
+                "name": "compression",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": 0,
+                    "max": 100
+                }
+            },
+            {
+                "id": "whk0u6fg",
+                "name": "fuel",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "4ydhmn21",
+                "name": "ignition",
+                "type": "text",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "lti2l0im",
+                "name": "injectorsSize",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": 0,
+                    "max": 100000
+                }
+            },
+            {
+                "id": "pmt4jrhm",
+                "name": "year",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": 2222
+                }
+            },
+            {
+                "id": "s9fjthhs",
+                "name": "hp",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": 0,
+                    "max": 100000
+                }
+            },
+            {
+                "id": "s4csjkpt",
+                "name": "stockHp",
+                "type": "number",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "min": 0,
+                    "max": 100000
+                }
+            },
+            {
+                "id": "hfpkctpl",
+                "name": "readme",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 5,
+                    "max": 3000,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "d5vpizsr",
+                "name": "textSearch",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "min": 1,
+                    "max": 2048,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "1bjweixt",
+                "name": "visibility",
+                "type": "select",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "values": [
+                        "public",
+                        "unlisted"
+                    ]
+                }
+            },
+            {
+                "id": "roqbws6u",
+                "name": "tuneFile",
+                "type": "file",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "maxSize": 5242880,
+                    "mimeTypes": [
+                        "application/gzip",
+                        "application/octet-stream"
+                    ],
+                    "thumbs": []
+                }
+            },
+            {
+                "id": "59syvgnj",
+                "name": "customIniFile",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "maxSize": 5242880,
+                    "mimeTypes": [
+                        "application/gzip",
+                        "application/octet-stream"
+                    ],
+                    "thumbs": []
+                }
+            },
+            {
+                "id": "gzccot0l",
+                "name": "logFiles",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 5,
+                    "maxSize": 5242880,
+                    "mimeTypes": [
+                        "application/gzip",
+                        "application/octet-stream"
+                    ],
+                    "thumbs": []
+                }
+            },
+            {
+                "id": "2z0i9ttc",
+                "name": "toothLogFiles",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 5,
+                    "maxSize": 5242880,
+                    "mimeTypes": [
+                        "application/gzip",
+                        "application/octet-stream"
+                    ],
+                    "thumbs": []
+                }
+            }
+        ],
+        "listRule": "visibility = \"public\" || (visibility = \"unlisted\" && @request.query.page = \"1\" && @request.query.perPage = \"1\") || (visibility = \"unlisted\" && @request.auth.id = author)",
+        "viewRule": null,
+        "createRule": "@request.auth.verified = true",
+        "updateRule": "@request.auth.id = author",
+        "deleteRule": null,
+        "options": {}
+    },
+    {
+        "id": "9eif9v40b0uw9l8",
+        "name": "iniFiles",
+        "type": "base",
+        "system": false,
+        "schema": [
+            {
+                "id": "h9yfwmvx",
+                "name": "signature",
+                "type": "text",
+                "system": false,
+                "required": true,
+                "unique": true,
+                "options": {
+                    "min": 3,
+                    "max": 255,
+                    "pattern": ""
+                }
+            },
+            {
+                "id": "z3e1a5cl",
+                "name": "file",
+                "type": "file",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "maxSize": 5242880,
+                    "mimeTypes": [
+                        "application/gzip",
+                        "application/octet-stream"
+                    ],
+                    "thumbs": []
+                }
+            },
+            {
+                "id": "t5uayom3",
+                "name": "ecosystem",
+                "type": "select",
+                "system": false,
+                "required": true,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "values": [
+                        "speeduino",
+                        "rusefi"
+                    ]
+                }
+            }
+        ],
+        "listRule": "",
+        "viewRule": null,
+        "createRule": null,
+        "updateRule": null,
+        "deleteRule": null,
+        "options": {}
+    },
+    {
+        "id": "systemprofiles0",
+        "name": "users",
+        "type": "auth",
+        "system": false,
+        "schema": [
+            {
+                "id": "pbfieldavatar",
+                "name": "avatar",
+                "type": "file",
+                "system": false,
+                "required": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "maxSize": 5242880,
+                    "mimeTypes": [
+                        "image/jpg",
+                        "image/jpeg",
+                        "image/png",
+                        "image/svg+xml",
+                        "image/gif"
+                    ],
+                    "thumbs": null
+                }
+            }
+        ],
+        "listRule": null,
+        "viewRule": "",
+        "createRule": "",
+        "updateRule": "id = @request.auth.id",
+        "deleteRule": null,
+        "options": {
+            "allowEmailAuth": true,
+            "allowOAuth2Auth": true,
+            "allowUsernameAuth": false,
+            "exceptEmailDomains": null,
+            "manageRule": null,
+            "minPasswordLength": 8,
+            "onlyEmailDomains": null,
+            "requireEmail": true
+        }
+    }
+]
