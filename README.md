@@ -1,18 +1,29 @@
-# HyperTuner Cloud backend
+<p align="center">
+  <img src="/public/icon.png" alt="HyperTuner" width="100">
+</p>
 
-This is the backend for the HyperTuner Cloud. It is based on a great [PocketBase](https://pocketbase.io) (Open Source backend in 1 file).
+<h1 align="center">HyperTuner Cloud Backend</h1>
 
-This repository contains:
+<div align="center">
+  <p><a href="https://hypertuner.cloud"><strong>hypertuner.cloud</strong></a></p>
+  <p><sub>The best way to share your tunes and logs.</sub></p>
+</div>
 
-- The source code of the HyperTuner Cloud backend that extends PocketBase.
+<br/>
+
+This is the backend for the [HyperTuner Cloud](https://github.com/hyper-tuner/hyper-tuner-cloud). It is based on a great [PocketBase](https://pocketbase.io) (Open Source backend in 1 file).
+
+## This repository
+
+- the source code of the **HyperTuner Cloud** backend that extends **PocketBase**.
 - database schema
 - configurations
-- deployment scripts / Docker and docker compose files
+- deployment scripts / **Docker** and docker compose files
 - migration scripts and guides
 
 ## Setting up your instance
 
-Use provider Docker files from the `/docker` directory or just grab the binary from the [Releases](https://github.com/hyper-tuner/cloud-backend) page:
+Use provider Docker files from the `/docker` directory or just grab the binary from the [Releases](https://github.com/hyper-tuner/cloud-backend/releases) page.
 
 ```bash
 ./cloud-backend serve
