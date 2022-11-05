@@ -6,6 +6,7 @@ import (
 
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/pocketbase"
+	"github.com/pocketbase/pocketbase/apis"
 	"github.com/pocketbase/pocketbase/core"
 	"github.com/pocketbase/pocketbase/models"
 )
@@ -21,7 +22,7 @@ func main() {
 				record, _err := app.Dao().FindFirstRecordByData("tunes", "tuneId", c.PathParam("tuneId"))
 
 				if _err != nil {
-					return c.JSON(http.StatusNotFound, _err)
+					return apis.NewNotFoundError("Tune not found", nil)
 				}
 
 				_errors := app.Dao().ExpandRecord(record, []string{"author"}, func(relCollection *models.Collection, relIds []string) ([]*models.Record, error) {
@@ -31,7 +32,7 @@ func main() {
 				})
 
 				if len(_errors) > 0 {
-					return c.JSON(http.StatusNotFound, _errors)
+					return apis.NewNotFoundError("Author not found", nil)
 				}
 
 				return c.JSON(http.StatusOK, record)
