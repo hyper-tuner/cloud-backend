@@ -45,6 +45,18 @@
               }
           },
           {
+              "id": "lwbwtgmx",
+              "name": "stars",
+              "type": "number",
+              "system": false,
+              "required": false,
+              "unique": false,
+              "options": {
+                  "min": 0,
+                  "max": null
+              }
+          },
+          {
               "id": "g9b17t9y",
               "name": "vehicleName",
               "type": "text",
@@ -427,5 +439,45 @@
           "onlyEmailDomains": null,
           "requireEmail": true
       }
+  },
+  {
+      "id": "z8cojwcvlyxxyll",
+      "name": "stargazers",
+      "type": "base",
+      "system": false,
+      "schema": [
+          {
+              "id": "him7pbq2",
+              "name": "user",
+              "type": "relation",
+              "system": false,
+              "required": true,
+              "unique": false,
+              "options": {
+                  "maxSelect": 1,
+                  "collectionId": "systemprofiles0",
+                  "cascadeDelete": false
+              }
+          },
+          {
+              "id": "ny7akrmn",
+              "name": "tune",
+              "type": "relation",
+              "system": false,
+              "required": true,
+              "unique": false,
+              "options": {
+                  "maxSelect": 1,
+                  "collectionId": "5djmpehuiigg06b",
+                  "cascadeDelete": false
+              }
+          }
+      ],
+      "listRule": null,
+      "viewRule": null,
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null,
+      "options": {}
   }
 ]
