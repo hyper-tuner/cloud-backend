@@ -11,7 +11,7 @@
 
 <br/>
 
-This is the backend for the [HyperTuner Cloud](https://github.com/hyper-tuner/hyper-tuner-cloud). It is based on a great [PocketBase](https://pocketbase.io) (Open Source backend in 1 file).
+This is the backend for the [HyperTuner Cloud](https://github.com/hyper-tuner/hyper-tuner-cloud). It is based on a great [PocketBase](https://pocketbase.io) backend.
 
 ## This repository
 
