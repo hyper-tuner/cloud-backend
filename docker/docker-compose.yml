@@ -1,13 +1,12 @@
 version: '3.1'
 
-# This is just an example
 services:
   cloud-backend:
     platform: linux/x86_64
     build: .
     restart: unless-stopped
-    command: ["/cloud-backend/cloud-backend", "serve", "--http=0.0.0.0:8080"]
+    command: ["/cloud-backend", "serve", "--http=0.0.0.0:8080"]
     volumes:
-      - ./pb_data:/cloud-backend/pb_data
+      - ./pb_data:/pb_data
     ports:
       - 80:8080
