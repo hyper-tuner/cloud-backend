@@ -21,6 +21,12 @@ This is the backend for the [HyperTuner Cloud](https://github.com/hyper-tuner/hy
 - deployment scripts / **Docker** and docker compose files
 - migration scripts and guides
 
+## Upgrading
+
+Some versions will contain breaking changes.
+
+If you are upgrading from a previous version, please read the [UPGRADE.md](UPGRADE.md) file.
+
 ## Setting up your instance
 
 Use provider Docker files from the `/docker` directory or just grab the binary from the [Releases](https://github.com/hyper-tuner/cloud-backend/releases) page.
