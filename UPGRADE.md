@@ -1,9 +1,17 @@
 # Upgrade guide
 
+## From v1.0.1 to v1.1.0
+
+This version adds stargazers.
+
+1. import new schema first
+2. get the new binary or Dockerfile and run `cloud-backend`, make sure everything works as it was before (don't forget to backup `pb_data` data)
+3. upgrade frontend to `v1.1.0`
+
 ## From v1.0.0 to v1.0.1
 
 This version adds to new custom endpoints for fetching tune and ini file.
 
-1. get the new binary and run `cloud-backend`, make sure everything works as it was before (don't forget to backup `pb_data` data)
+1. get the new binary or Dockerfile and run `cloud-backend`, make sure everything works as it was before (don't forget to backup `pb_data` data)
 2. upgrade frontend to `v1.0.1`
 3. import new schema

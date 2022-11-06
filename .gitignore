@@ -32,6 +32,7 @@ go.work
 # build
 cloud-backend
 cloud-backend.exe
+main
 
 # docker overrides
 docker-compose.override.yml
