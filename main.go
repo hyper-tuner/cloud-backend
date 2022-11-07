@@ -45,6 +45,9 @@ func main() {
 
 				return c.JSON(http.StatusOK, record)
 			},
+			Middlewares: []echo.MiddlewareFunc{
+				apis.ActivityLogger(app),
+			},
 		})
 
 		e.Router.AddRoute(echo.Route{
@@ -58,6 +61,9 @@ func main() {
 				}
 
 				return c.JSON(http.StatusOK, record)
+			},
+			Middlewares: []echo.MiddlewareFunc{
+				apis.ActivityLogger(app),
 			},
 		})
 
@@ -143,6 +149,7 @@ func main() {
 				})
 			},
 			Middlewares: []echo.MiddlewareFunc{
+				apis.ActivityLogger(app),
 				apis.LoadAuthContext(app.App),
 				apis.RequireAdminOrRecordAuth("users"),
 			},
@@ -180,6 +187,7 @@ func main() {
 				})
 			},
 			Middlewares: []echo.MiddlewareFunc{
+				apis.ActivityLogger(app),
 				apis.LoadAuthContext(app.App),
 				apis.RequireAdminOrRecordAuth("users"),
 			},
