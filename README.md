@@ -23,7 +23,7 @@ This is the backend for the [HyperTuner Cloud](https://github.com/hyper-tuner/hy
 
 ## Setting up your instance
 
-Use provider Docker image from or just grab the binary from the [Releases](https://github.com/hyper-tuner/cloud-backend/releases) page.
+Use provider Docker image or just grab the binary from the [Releases](https://github.com/hyper-tuner/cloud-backend/releases) page.
 
 ```bash
 ./cloud-backend serve
