@@ -4,7 +4,7 @@ RUN mkdir /app
 COPY . /app
 WORKDIR /app
 
-RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o cloud-backend
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o cloud-backend
 
 FROM alpine:latest AS production
 
