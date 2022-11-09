@@ -11,7 +11,7 @@ jobs:
     steps:
       -
         name: Set release tag
-        uses: olegtarasov/get-tag@v2
+        uses: olegtarasov/get-tag@v2.1.2
         id: tagName
         with:
           tagRegex: 'v(.*)'

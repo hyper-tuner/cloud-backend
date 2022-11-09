@@ -1,3 +1,5 @@
+name: Release binary
+
 on:
   push:
     tags:
