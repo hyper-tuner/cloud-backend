@@ -38,7 +38,7 @@ Now you can access the admin UI at: [https://your-instance.com/_/](https://your-
 https://hub.docker.com/r/karniv001/hyper-tuner-cloud-backend
 
 ```bash
-docker pull karniv001/hyper-tuner-cloud-backend
+docker pull karniv001/hyper-tuner-cloud-backend:1.1.2
 ```
 
 ## Upgrading
