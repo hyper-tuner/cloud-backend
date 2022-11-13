@@ -235,6 +235,21 @@
               }
           },
           {
+              "id": "dk22rxkw",
+              "name": "tags",
+              "type": "select",
+              "system": false,
+              "required": false,
+              "unique": false,
+              "options": {
+                  "maxSelect": 1,
+                  "values": [
+                      "base map",
+                      "help needed"
+                  ]
+              }
+          },
+          {
               "id": "d5vpizsr",
               "name": "textSearch",
               "type": "text",
