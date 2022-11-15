@@ -35,7 +35,7 @@ Now you can access the admin UI at: [https://your-instance.com/_/](https://your-
 
 ### Docker image
 
-https://hub.docker.com/r/karniv001/hypertuner-cloud-backend
+[https://hub.docker.com/r/karniv001/hypertuner-cloud-backend](https://hub.docker.com/r/karniv001/hypertuner-cloud-backend)
 
 ```bash
 docker pull karniv001/hypertuner-cloud-backend:1.1.4
