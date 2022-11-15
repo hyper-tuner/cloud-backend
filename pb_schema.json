@@ -437,12 +437,21 @@
                   ],
                   "thumbs": null
               }
+          },
+          {
+              "id": "fqmcoapu",
+              "name": "verifiedAuthor",
+              "type": "bool",
+              "system": false,
+              "required": false,
+              "unique": false,
+              "options": {}
           }
       ],
       "listRule": null,
       "viewRule": "",
       "createRule": "",
-      "updateRule": "id = @request.auth.id",
+      "updateRule": "id = @request.auth.id && @request.data.verifiedAuthor = null",
       "deleteRule": null,
       "options": {
           "allowEmailAuth": true,
