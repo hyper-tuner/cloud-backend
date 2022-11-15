@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/labstack/echo/v5 v5.0.0-20220201181537-ed2888cfa198
 	github.com/pocketbase/dbx v1.7.0
-	github.com/pocketbase/pocketbase v0.8.0-rc2.0.20221105112208-a2abeb872aca
+	github.com/pocketbase/pocketbase v0.8.0-rc3.0.20221115130646-4528f075dc77
 )
 
 require (
