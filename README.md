@@ -11,7 +11,7 @@
 
 <br/>
 
-This is the backend for the [HyperTuner Cloud](https://github.com/hyper-tuner/hyper-tuner-cloud). It is based on a great [PocketBase](https://pocketbase.io) backend.
+This is the backend for the [HyperTuner Cloud](https://github.com/hyper-tuner/hypertuner-cloud). It's based on [PocketBase](https://pocketbase.io).
 
 ## This repository
 
@@ -35,10 +35,10 @@ Now you can access the admin UI at: [https://your-instance.com/_/](https://your-
 
 ### Docker image
 
-https://hub.docker.com/r/karniv001/hyper-tuner-cloud-backend
+https://hub.docker.com/r/karniv001/hypertuner-cloud-backend
 
 ```bash
-docker pull karniv001/hyper-tuner-cloud-backend:1.1.2
+docker pull karniv001/hypertuner-cloud-backend:1.1.2
 ```
 
 ## Upgrading

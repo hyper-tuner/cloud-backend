@@ -33,4 +33,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: karniv001/hyper-tuner-cloud-backend:${{ steps.tagName.outputs.tag }}
+          tags: karniv001/hypertuner-cloud-backend:${{ steps.tagName.outputs.tag }}
