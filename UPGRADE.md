@@ -1,12 +1,20 @@
 # Upgrade guide
 
-## From v1.0.1 to v1.1.0
+## From v1.1.x to v1.2.x
 
 This version adds stargazers.
 
 1. import new schema first
 2. get the new binary or Dockerfile and run `cloud-backend`, make sure everything works as it was before (don't forget to backup `pb_data` data)
-3. upgrade frontend to `v1.1.0`
+3. upgrade frontend to `v1.2.x`
+
+## From v1.0.1 to v1.1.x
+
+This version adds stargazers.
+
+1. import new schema first
+2. get the new binary or Dockerfile and run `cloud-backend`, make sure everything works as it was before (don't forget to backup `pb_data` data)
+3. upgrade frontend to `v1.1.x`
 
 ## From v1.0.0 to v1.0.1
 
