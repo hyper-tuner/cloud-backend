@@ -43,7 +43,8 @@ docker pull karniv001/hypertuner-cloud-backend:1.2.0
 
 ## Upgrading
 
-Some versions will contain breaking changes.
+> **Warning**
+> Some versions will contain breaking changes!
 
 If you are upgrading from a previous version, please read the [UPGRADE.md](UPGRADE.md) file.
 
