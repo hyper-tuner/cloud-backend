@@ -1,5 +1,8 @@
 # Upgrade guide
 
+> **Warning**
+> Upgrade one **minor** version at a time! Example: `x.1.x` to `x.2.x` to `x.3.x` and so on.
+
 ## From v1.1.x to v1.2.x
 
 This version adds stargazers.
