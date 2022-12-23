@@ -38,7 +38,7 @@ Now you can access the admin UI at: [https://your-instance.com/_/](https://your-
 [https://hub.docker.com/r/karniv001/hypertuner-cloud-backend](https://hub.docker.com/r/karniv001/hypertuner-cloud-backend)
 
 ```bash
-docker pull karniv001/hypertuner-cloud-backend:1.2.0
+docker pull karniv001/hypertuner-cloud-backend:1.2.3
 ```
 
 ## Upgrading
@@ -84,6 +84,10 @@ https://{FRONTEND-URL}/?redirect=oauth&provider=facebook
 ### Loading schema
 
 Copy/load `pb_schema.json` to `Settings -> Sync -> Import collections` in the admin UI.
+
+### Health check
+
+You can use the `/api/health` endpoint to check if the application is up and running.
 
 ## Building from source
 
