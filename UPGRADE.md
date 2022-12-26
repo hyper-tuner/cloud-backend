@@ -5,7 +5,7 @@
 
 ## From v1.1.x to v1.2.x
 
-This version adds stargazers.
+This version adds tags and verified author badge.
 
 1. import new schema first
 2. get the new binary or Dockerfile and run `cloud-backend`, make sure everything works as it was before (don't forget to backup `pb_data` data)
