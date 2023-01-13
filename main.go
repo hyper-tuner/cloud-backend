@@ -33,15 +33,7 @@ func main() {
 					return apis.NewNotFoundError("Tune not found", nil)
 				}
 
-				_errors := app.Dao().ExpandRecord(record, []string{"author"}, func(relCollection *models.Collection, relIds []string) ([]*models.Record, error) {
-					record, _err := app.Dao().FindRecordById(relCollection.Name, relIds[0])
-
-					return []*models.Record{record}, _err
-				})
-
-				if len(_errors) > 0 {
-					return apis.NewNotFoundError("Author not found", nil)
-				}
+				apis.EnrichRecord(c, app.Dao(), record, "author")
 
 				return c.JSON(http.StatusOK, record)
 			},
