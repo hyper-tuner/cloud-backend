@@ -3,6 +3,7 @@
     "Buildx",
     "daos",
     "DOCKERHUB",
+    "FOME",
     "labstack",
     "Middlewares",
     "pocketbase",
