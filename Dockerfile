@@ -1,4 +1,4 @@
-FROM golang:1.19.4 AS builder
+FROM golang:1.20.3 AS builder
 
 RUN mkdir /app
 COPY . /app

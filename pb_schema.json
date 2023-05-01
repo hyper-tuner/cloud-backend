@@ -1,507 +1,503 @@
 [
   {
-      "id": "5djmpehuiigg06b",
-      "name": "tunes",
-      "type": "base",
-      "system": false,
-      "schema": [
-          {
-              "id": "io2qgnvc",
-              "name": "author",
-              "type": "relation",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "collectionId": "systemprofiles0",
-                  "cascadeDelete": false
-              }
-          },
-          {
-              "id": "pkq4wfcj",
-              "name": "tuneId",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": true,
-              "options": {
-                  "min": 5,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "jcjunqhl",
-              "name": "signature",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 3,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "lwbwtgmx",
-              "name": "stars",
-              "type": "number",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": 0,
-                  "max": null
-              }
-          },
-          {
-              "id": "g9b17t9y",
-              "name": "vehicleName",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 2,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "w7qssd4t",
-              "name": "engineMake",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 2,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "h47ir1bi",
-              "name": "engineCode",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 2,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "frqzy24e",
-              "name": "displacement",
-              "type": "number",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 0,
-                  "max": 100
-              }
-          },
-          {
-              "id": "j1asw8n1",
-              "name": "cylindersCount",
-              "type": "number",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 0,
-                  "max": 16
-              }
-          },
-          {
-              "id": "0x8poyze",
-              "name": "aspiration",
-              "type": "select",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "values": [
-                      "na",
-                      "turbocharged",
-                      "supercharged"
-                  ]
-              }
-          },
-          {
-              "id": "ssd9iccu",
-              "name": "compression",
-              "type": "number",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": 0,
-                  "max": 100
-              }
-          },
-          {
-              "id": "whk0u6fg",
-              "name": "fuel",
-              "type": "text",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": null,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "4ydhmn21",
-              "name": "ignition",
-              "type": "text",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": null,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "lti2l0im",
-              "name": "injectorsSize",
-              "type": "number",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": 0,
-                  "max": 100000
-              }
-          },
-          {
-              "id": "pmt4jrhm",
-              "name": "year",
-              "type": "number",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": null,
-                  "max": 2222
-              }
-          },
-          {
-              "id": "s9fjthhs",
-              "name": "hp",
-              "type": "number",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": 0,
-                  "max": 100000
-              }
-          },
-          {
-              "id": "s4csjkpt",
-              "name": "stockHp",
-              "type": "number",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "min": 0,
-                  "max": 100000
-              }
-          },
-          {
-              "id": "hfpkctpl",
-              "name": "readme",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 5,
-                  "max": 3000,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "dk22rxkw",
-              "name": "tags",
-              "type": "select",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "values": [
-                      "base map",
-                      "help needed"
-                  ]
-              }
-          },
-          {
-              "id": "d5vpizsr",
-              "name": "textSearch",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "min": 1,
-                  "max": 2048,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "1bjweixt",
-              "name": "visibility",
-              "type": "select",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "values": [
-                      "public",
-                      "unlisted"
-                  ]
-              }
-          },
-          {
-              "id": "roqbws6u",
-              "name": "tuneFile",
-              "type": "file",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "maxSize": 5242880,
-                  "mimeTypes": [
-                      "application/gzip",
-                      "application/octet-stream"
-                  ],
-                  "thumbs": []
-              }
-          },
-          {
-              "id": "59syvgnj",
-              "name": "customIniFile",
-              "type": "file",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "maxSize": 5242880,
-                  "mimeTypes": [
-                      "application/gzip",
-                      "application/octet-stream"
-                  ],
-                  "thumbs": []
-              }
-          },
-          {
-              "id": "gzccot0l",
-              "name": "logFiles",
-              "type": "file",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "maxSelect": 5,
-                  "maxSize": 5242880,
-                  "mimeTypes": [
-                      "application/gzip",
-                      "application/octet-stream"
-                  ],
-                  "thumbs": []
-              }
-          },
-          {
-              "id": "2z0i9ttc",
-              "name": "toothLogFiles",
-              "type": "file",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "maxSelect": 5,
-                  "maxSize": 5242880,
-                  "mimeTypes": [
-                      "application/gzip",
-                      "application/octet-stream"
-                  ],
-                  "thumbs": []
-              }
-          }
-      ],
-      "listRule": "visibility = \"public\" || (visibility = \"unlisted\" && author = @request.auth.id)",
-      "viewRule": null,
-      "createRule": "@request.auth.verified = true",
-      "updateRule": "@request.auth.id = author",
-      "deleteRule": null,
-      "options": {}
-  },
-  {
-      "id": "9eif9v40b0uw9l8",
-      "name": "iniFiles",
-      "type": "base",
-      "system": false,
-      "schema": [
-          {
-              "id": "h9yfwmvx",
-              "name": "signature",
-              "type": "text",
-              "system": false,
-              "required": true,
-              "unique": true,
-              "options": {
-                  "min": 3,
-                  "max": 255,
-                  "pattern": ""
-              }
-          },
-          {
-              "id": "z3e1a5cl",
-              "name": "file",
-              "type": "file",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "maxSize": 5242880,
-                  "mimeTypes": [
-                      "application/gzip",
-                      "application/octet-stream"
-                  ],
-                  "thumbs": []
-              }
-          },
-          {
-              "id": "t5uayom3",
-              "name": "ecosystem",
-              "type": "select",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "values": [
-                      "speeduino",
-                      "rusefi"
-                  ]
-              }
-          }
-      ],
-      "listRule": "",
-      "viewRule": "",
-      "createRule": null,
-      "updateRule": null,
-      "deleteRule": null,
-      "options": {}
-  },
-  {
-      "id": "systemprofiles0",
-      "name": "users",
-      "type": "auth",
-      "system": false,
-      "schema": [
-          {
-              "id": "pbfieldavatar",
-              "name": "avatar",
-              "type": "file",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "maxSize": 5242880,
-                  "mimeTypes": [
-                      "image/jpg",
-                      "image/jpeg",
-                      "image/png",
-                      "image/svg+xml",
-                      "image/gif"
-                  ],
-                  "thumbs": null
-              }
-          },
-          {
-              "id": "fqmcoapu",
-              "name": "verifiedAuthor",
-              "type": "bool",
-              "system": false,
-              "required": false,
-              "unique": false,
-              "options": {}
-          }
-      ],
-      "listRule": null,
-      "viewRule": "",
-      "createRule": "",
-      "updateRule": "id = @request.auth.id && @request.data.verifiedAuthor = null",
-      "deleteRule": null,
-      "options": {
-          "allowEmailAuth": true,
-          "allowOAuth2Auth": true,
-          "allowUsernameAuth": false,
-          "exceptEmailDomains": null,
-          "manageRule": null,
-          "minPasswordLength": 8,
-          "onlyEmailDomains": null,
-          "requireEmail": true
+    "id": "5djmpehuiigg06b",
+    "name": "tunes",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "io2qgnvc",
+        "name": "author",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "options": {
+          "collectionId": "systemprofiles0",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": null
+        }
+      },
+      {
+        "id": "pkq4wfcj",
+        "name": "tuneId",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 5,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "jcjunqhl",
+        "name": "signature",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 3,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "lwbwtgmx",
+        "name": "stars",
+        "type": "number",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": 0,
+          "max": null
+        }
+      },
+      {
+        "id": "g9b17t9y",
+        "name": "vehicleName",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 2,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "w7qssd4t",
+        "name": "engineMake",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 2,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "h47ir1bi",
+        "name": "engineCode",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 2,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "frqzy24e",
+        "name": "displacement",
+        "type": "number",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "id": "j1asw8n1",
+        "name": "cylindersCount",
+        "type": "number",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 0,
+          "max": 16
+        }
+      },
+      {
+        "id": "0x8poyze",
+        "name": "aspiration",
+        "type": "select",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "na",
+            "turbocharged",
+            "supercharged"
+          ]
+        }
+      },
+      {
+        "id": "ssd9iccu",
+        "name": "compression",
+        "type": "number",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "id": "whk0u6fg",
+        "name": "fuel",
+        "type": "text",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": null,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "4ydhmn21",
+        "name": "ignition",
+        "type": "text",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": null,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "lti2l0im",
+        "name": "injectorsSize",
+        "type": "number",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": 0,
+          "max": 100000
+        }
+      },
+      {
+        "id": "pmt4jrhm",
+        "name": "year",
+        "type": "number",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": null,
+          "max": 2222
+        }
+      },
+      {
+        "id": "s9fjthhs",
+        "name": "hp",
+        "type": "number",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": 0,
+          "max": 100000
+        }
+      },
+      {
+        "id": "s4csjkpt",
+        "name": "stockHp",
+        "type": "number",
+        "system": false,
+        "required": false,
+        "options": {
+          "min": 0,
+          "max": 100000
+        }
+      },
+      {
+        "id": "hfpkctpl",
+        "name": "readme",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 5,
+          "max": 3000,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "dk22rxkw",
+        "name": "tags",
+        "type": "select",
+        "system": false,
+        "required": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "base map",
+            "help needed"
+          ]
+        }
+      },
+      {
+        "id": "d5vpizsr",
+        "name": "textSearch",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 1,
+          "max": 2048,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "1bjweixt",
+        "name": "visibility",
+        "type": "select",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "public",
+            "unlisted"
+          ]
+        }
+      },
+      {
+        "id": "roqbws6u",
+        "name": "tuneFile",
+        "type": "file",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "application/gzip",
+            "application/octet-stream"
+          ],
+          "thumbs": [],
+          "protected": false
+        }
+      },
+      {
+        "id": "59syvgnj",
+        "name": "customIniFile",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "application/gzip",
+            "application/octet-stream"
+          ],
+          "thumbs": [],
+          "protected": false
+        }
+      },
+      {
+        "id": "gzccot0l",
+        "name": "logFiles",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "options": {
+          "maxSelect": 5,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "application/gzip",
+            "application/octet-stream"
+          ],
+          "thumbs": [],
+          "protected": false
+        }
+      },
+      {
+        "id": "2z0i9ttc",
+        "name": "toothLogFiles",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "options": {
+          "maxSelect": 5,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "application/gzip",
+            "application/octet-stream"
+          ],
+          "thumbs": [],
+          "protected": false
+        }
       }
+    ],
+    "indexes": [
+      "CREATE INDEX `tunes_created_idx` ON `tunes` (`created`)",
+      "CREATE UNIQUE INDEX \"idx_unique_pkq4wfcj\" on \"tunes\" (\"tuneId\")"
+    ],
+    "listRule": "visibility = \"public\" || (visibility = \"unlisted\" && author = @request.auth.id)",
+    "viewRule": null,
+    "createRule": "@request.auth.verified = true",
+    "updateRule": "@request.auth.id = author",
+    "deleteRule": null,
+    "options": {}
   },
   {
-      "id": "z8cojwcvlyxxyll",
-      "name": "stargazers",
-      "type": "base",
-      "system": false,
-      "schema": [
-          {
-              "id": "him7pbq2",
-              "name": "user",
-              "type": "relation",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "collectionId": "systemprofiles0",
-                  "cascadeDelete": false
-              }
-          },
-          {
-              "id": "ny7akrmn",
-              "name": "tune",
-              "type": "relation",
-              "system": false,
-              "required": true,
-              "unique": false,
-              "options": {
-                  "maxSelect": 1,
-                  "collectionId": "5djmpehuiigg06b",
-                  "cascadeDelete": false
-              }
-          }
-      ],
-      "listRule": null,
-      "viewRule": null,
-      "createRule": null,
-      "updateRule": null,
-      "deleteRule": null,
-      "options": {}
+    "id": "systemprofiles0",
+    "name": "users",
+    "type": "auth",
+    "system": false,
+    "schema": [
+      {
+        "id": "pbfieldavatar",
+        "name": "avatar",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "image/jpg",
+            "image/jpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/gif"
+          ],
+          "thumbs": null,
+          "protected": false
+        }
+      },
+      {
+        "id": "fqmcoapu",
+        "name": "verifiedAuthor",
+        "type": "bool",
+        "system": false,
+        "required": false,
+        "options": {}
+      }
+    ],
+    "indexes": [
+      "CREATE INDEX `_systemprofiles0_created_idx` ON `users` (`created`)"
+    ],
+    "listRule": null,
+    "viewRule": "",
+    "createRule": "",
+    "updateRule": "id = @request.auth.id && @request.data.verifiedAuthor = null",
+    "deleteRule": null,
+    "options": {
+      "allowEmailAuth": true,
+      "allowOAuth2Auth": true,
+      "allowUsernameAuth": false,
+      "exceptEmailDomains": null,
+      "manageRule": null,
+      "minPasswordLength": 8,
+      "onlyEmailDomains": null,
+      "requireEmail": true
+    }
+  },
+  {
+    "id": "z8cojwcvlyxxyll",
+    "name": "stargazers",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "him7pbq2",
+        "name": "user",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "options": {
+          "collectionId": "systemprofiles0",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": null
+        }
+      },
+      {
+        "id": "ny7akrmn",
+        "name": "tune",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "options": {
+          "collectionId": "5djmpehuiigg06b",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": null
+        }
+      }
+    ],
+    "indexes": [
+      "CREATE INDEX `_z8cojwcvlyxxyll_created_idx` ON `stargazers` (`created`)",
+      "CREATE UNIQUE INDEX `unique_stargazers_on_user_tune` ON `stargazers` (`user`, `tune`)"
+    ],
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "options": {}
+  },
+  {
+    "id": "9eif9v40b0uw9l8",
+    "name": "iniFiles",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "h9yfwmvx",
+        "name": "signature",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 3,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "z3e1a5cl",
+        "name": "file",
+        "type": "file",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "application/gzip",
+            "application/octet-stream"
+          ],
+          "thumbs": [],
+          "protected": false
+        }
+      },
+      {
+        "id": "t5uayom3",
+        "name": "ecosystem",
+        "type": "select",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "speeduino",
+            "rusefi",
+            "fome"
+          ]
+        }
+      }
+    ],
+    "indexes": [
+      "CREATE INDEX `officialIniFiles_created_idx` ON `iniFiles` (`created`)",
+      "CREATE UNIQUE INDEX `idx_unique_h9yfwmvx` ON `iniFiles` (`signature`)"
+    ],
+    "listRule": "",
+    "viewRule": "",
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "options": {}
   }
 ]
