@@ -1,5 +1,167 @@
 [
   {
+    "id": "9eif9v40b0uw9l8",
+    "name": "iniFiles",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "h9yfwmvx",
+        "name": "signature",
+        "type": "text",
+        "system": false,
+        "required": true,
+        "options": {
+          "min": 3,
+          "max": 255,
+          "pattern": ""
+        }
+      },
+      {
+        "id": "z3e1a5cl",
+        "name": "file",
+        "type": "file",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "application/gzip",
+            "application/octet-stream"
+          ],
+          "thumbs": [],
+          "protected": false
+        }
+      },
+      {
+        "id": "t5uayom3",
+        "name": "ecosystem",
+        "type": "select",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "speeduino",
+            "rusefi",
+            "fome"
+          ]
+        }
+      }
+    ],
+    "indexes": [
+      "CREATE INDEX `officialIniFiles_created_idx` ON `iniFiles` (`created`)",
+      "CREATE UNIQUE INDEX `idx_unique_h9yfwmvx` ON `iniFiles` (`signature`)"
+    ],
+    "listRule": "",
+    "viewRule": "",
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "options": {}
+  },
+  {
+    "id": "systemprofiles0",
+    "name": "users",
+    "type": "auth",
+    "system": false,
+    "schema": [
+      {
+        "id": "pbfieldavatar",
+        "name": "avatar",
+        "type": "file",
+        "system": false,
+        "required": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "image/jpg",
+            "image/jpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/gif"
+          ],
+          "thumbs": null,
+          "protected": false
+        }
+      },
+      {
+        "id": "fqmcoapu",
+        "name": "verifiedAuthor",
+        "type": "bool",
+        "system": false,
+        "required": false,
+        "options": {}
+      }
+    ],
+    "indexes": [
+      "CREATE INDEX `_systemprofiles0_created_idx` ON `users` (`created`)"
+    ],
+    "listRule": null,
+    "viewRule": "",
+    "createRule": "",
+    "updateRule": "id = @request.auth.id && @request.data.verifiedAuthor = null",
+    "deleteRule": null,
+    "options": {
+      "allowEmailAuth": true,
+      "allowOAuth2Auth": true,
+      "allowUsernameAuth": false,
+      "exceptEmailDomains": null,
+      "manageRule": null,
+      "minPasswordLength": 8,
+      "onlyEmailDomains": null,
+      "requireEmail": true
+    }
+  },
+  {
+    "id": "z8cojwcvlyxxyll",
+    "name": "stargazers",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "id": "him7pbq2",
+        "name": "user",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "options": {
+          "collectionId": "systemprofiles0",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": null
+        }
+      },
+      {
+        "id": "ny7akrmn",
+        "name": "tune",
+        "type": "relation",
+        "system": false,
+        "required": true,
+        "options": {
+          "collectionId": "5djmpehuiigg06b",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": null
+        }
+      }
+    ],
+    "indexes": [
+      "CREATE INDEX `_z8cojwcvlyxxyll_created_idx` ON `stargazers` (`created`)",
+      "CREATE UNIQUE INDEX `unique_stargazers_on_user_tune` ON `stargazers` (`user`, `tune`)"
+    ],
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "options": {}
+  },
+  {
     "id": "5djmpehuiigg06b",
     "name": "tunes",
     "type": "base",
@@ -29,6 +191,20 @@
           "min": 5,
           "max": 255,
           "pattern": ""
+        }
+      },
+      {
+        "id": "6gd6tzwx",
+        "name": "source",
+        "type": "select",
+        "system": false,
+        "required": true,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "web",
+            "app"
+          ]
         }
       },
       {
@@ -329,174 +505,12 @@
     ],
     "indexes": [
       "CREATE INDEX `tunes_created_idx` ON `tunes` (`created`)",
-      "CREATE UNIQUE INDEX \"idx_unique_pkq4wfcj\" on \"tunes\" (\"tuneId\")"
+      "CREATE UNIQUE INDEX `idx_unique_pkq4wfcj` ON `tunes` (`tuneId`)"
     ],
     "listRule": "visibility = \"public\" || (visibility = \"unlisted\" && author = @request.auth.id)",
     "viewRule": null,
     "createRule": "@request.auth.verified = true",
     "updateRule": "@request.auth.id = author",
-    "deleteRule": null,
-    "options": {}
-  },
-  {
-    "id": "systemprofiles0",
-    "name": "users",
-    "type": "auth",
-    "system": false,
-    "schema": [
-      {
-        "id": "pbfieldavatar",
-        "name": "avatar",
-        "type": "file",
-        "system": false,
-        "required": false,
-        "options": {
-          "maxSelect": 1,
-          "maxSize": 5242880,
-          "mimeTypes": [
-            "image/jpg",
-            "image/jpeg",
-            "image/png",
-            "image/svg+xml",
-            "image/gif"
-          ],
-          "thumbs": null,
-          "protected": false
-        }
-      },
-      {
-        "id": "fqmcoapu",
-        "name": "verifiedAuthor",
-        "type": "bool",
-        "system": false,
-        "required": false,
-        "options": {}
-      }
-    ],
-    "indexes": [
-      "CREATE INDEX `_systemprofiles0_created_idx` ON `users` (`created`)"
-    ],
-    "listRule": null,
-    "viewRule": "",
-    "createRule": "",
-    "updateRule": "id = @request.auth.id && @request.data.verifiedAuthor = null",
-    "deleteRule": null,
-    "options": {
-      "allowEmailAuth": true,
-      "allowOAuth2Auth": true,
-      "allowUsernameAuth": false,
-      "exceptEmailDomains": null,
-      "manageRule": null,
-      "minPasswordLength": 8,
-      "onlyEmailDomains": null,
-      "requireEmail": true
-    }
-  },
-  {
-    "id": "z8cojwcvlyxxyll",
-    "name": "stargazers",
-    "type": "base",
-    "system": false,
-    "schema": [
-      {
-        "id": "him7pbq2",
-        "name": "user",
-        "type": "relation",
-        "system": false,
-        "required": true,
-        "options": {
-          "collectionId": "systemprofiles0",
-          "cascadeDelete": false,
-          "minSelect": null,
-          "maxSelect": 1,
-          "displayFields": null
-        }
-      },
-      {
-        "id": "ny7akrmn",
-        "name": "tune",
-        "type": "relation",
-        "system": false,
-        "required": true,
-        "options": {
-          "collectionId": "5djmpehuiigg06b",
-          "cascadeDelete": false,
-          "minSelect": null,
-          "maxSelect": 1,
-          "displayFields": null
-        }
-      }
-    ],
-    "indexes": [
-      "CREATE INDEX `_z8cojwcvlyxxyll_created_idx` ON `stargazers` (`created`)",
-      "CREATE UNIQUE INDEX `unique_stargazers_on_user_tune` ON `stargazers` (`user`, `tune`)"
-    ],
-    "listRule": null,
-    "viewRule": null,
-    "createRule": null,
-    "updateRule": null,
-    "deleteRule": null,
-    "options": {}
-  },
-  {
-    "id": "9eif9v40b0uw9l8",
-    "name": "iniFiles",
-    "type": "base",
-    "system": false,
-    "schema": [
-      {
-        "id": "h9yfwmvx",
-        "name": "signature",
-        "type": "text",
-        "system": false,
-        "required": true,
-        "options": {
-          "min": 3,
-          "max": 255,
-          "pattern": ""
-        }
-      },
-      {
-        "id": "z3e1a5cl",
-        "name": "file",
-        "type": "file",
-        "system": false,
-        "required": true,
-        "options": {
-          "maxSelect": 1,
-          "maxSize": 5242880,
-          "mimeTypes": [
-            "application/gzip",
-            "application/octet-stream"
-          ],
-          "thumbs": [],
-          "protected": false
-        }
-      },
-      {
-        "id": "t5uayom3",
-        "name": "ecosystem",
-        "type": "select",
-        "system": false,
-        "required": true,
-        "options": {
-          "maxSelect": 1,
-          "values": [
-            "speeduino",
-            "rusefi",
-            "fome"
-          ]
-        }
-      }
-    ],
-    "indexes": [
-      "CREATE INDEX `officialIniFiles_created_idx` ON `iniFiles` (`created`)",
-      "CREATE UNIQUE INDEX `idx_unique_h9yfwmvx` ON `iniFiles` (`signature`)"
-    ],
-    "listRule": "",
-    "viewRule": "",
-    "createRule": null,
-    "updateRule": null,
     "deleteRule": null,
     "options": {}
   }
