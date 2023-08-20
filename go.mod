@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/labstack/echo/v5 v5.0.0-20230722203903-ec5b858dab61
 	github.com/pocketbase/dbx v1.10.0
-	github.com/pocketbase/pocketbase v0.17.4
+	github.com/pocketbase/pocketbase v0.17.5
 )
 
 require (
@@ -58,7 +58,7 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	go.opencensus.io v0.24.0 // indirect
-	gocloud.dev v0.33.0 // indirect
+	gocloud.dev v0.32.0 // indirect
 	golang.org/x/crypto v0.12.0 // indirect
 	golang.org/x/image v0.11.0 // indirect
 	golang.org/x/mod v0.12.0 // indirect
