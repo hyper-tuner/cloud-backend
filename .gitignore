@@ -36,3 +36,6 @@ main
 
 # docker overrides
 docker-compose.override.yml
+
+# debug artifacts
+__debug_bin*
