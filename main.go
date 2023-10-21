@@ -23,6 +23,7 @@ func main() {
 	app := pocketbase.New()
 
 	app.OnBeforeServe().Add(func(e *core.ServeEvent) error {
+		/* trunk-ignore(golangci-lint/errcheck) */
 		e.Router.AddRoute(echo.Route{
 			Method: http.MethodGet,
 			Path:   "/api/custom/tunes/byTuneId/:tuneId",
@@ -33,15 +34,19 @@ func main() {
 					return apis.NewNotFoundError("Tune not found", nil)
 				}
 
-				apis.EnrichRecord(c, app.Dao(), record, "author")
+				if err := apis.EnrichRecord(c, app.Dao(), record, "author"); err != nil {
+					return err
+				}
 
 				return c.JSON(http.StatusOK, record)
 			},
+
 			Middlewares: []echo.MiddlewareFunc{
 				apis.ActivityLogger(app),
 			},
 		})
 
+		/* trunk-ignore(golangci-lint/errcheck) */
 		e.Router.AddRoute(echo.Route{
 			Method: http.MethodGet,
 			Path:   "/api/custom/iniFiles/bySignature/:signature",
@@ -59,6 +64,7 @@ func main() {
 			},
 		})
 
+		/* trunk-ignore(golangci-lint/errcheck) */
 		e.Router.AddRoute(echo.Route{
 			Method: http.MethodPost,
 			Path:   "/api/custom/stargazers/toggleStar",
@@ -134,6 +140,10 @@ func main() {
 
 				// fetch again and return current state
 				tune, _err := app.Dao().FindFirstRecordByData(tunesCollectionName, "id", stargazer.Tune)
+
+				if _err != nil {
+					return apis.NewNotFoundError("Tune not found", nil)
+				}
 
 				return c.JSON(http.StatusOK, map[string]any{
 					"stars":     tune.Get("stars").(float64),

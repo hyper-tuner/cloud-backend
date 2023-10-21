@@ -4,9 +4,11 @@
     "daos",
     "DOCKERHUB",
     "FOME",
+    "golangci",
     "labstack",
     "Middlewares",
     "pocketbase",
+    "runtimes",
     "unstar"
   ]
 }
