@@ -1,3 +1,7 @@
+run:
+  # Default: 1m
+  timeout: 5m
+
 issues:
   exclude:
     - Error return value of `e.Router.AddRoute` is not checked
