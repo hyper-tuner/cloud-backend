@@ -23,7 +23,6 @@ func main() {
 	app := pocketbase.New()
 
 	app.OnBeforeServe().Add(func(e *core.ServeEvent) error {
-		/* trunk-ignore(golangci-lint/errcheck) */
 		e.Router.AddRoute(echo.Route{
 			Method: http.MethodGet,
 			Path:   "/api/custom/tunes/byTuneId/:tuneId",
@@ -46,7 +45,6 @@ func main() {
 			},
 		})
 
-		/* trunk-ignore(golangci-lint/errcheck) */
 		e.Router.AddRoute(echo.Route{
 			Method: http.MethodGet,
 			Path:   "/api/custom/iniFiles/bySignature/:signature",
@@ -64,7 +62,6 @@ func main() {
 			},
 		})
 
-		/* trunk-ignore(golangci-lint/errcheck) */
 		e.Router.AddRoute(echo.Route{
 			Method: http.MethodPost,
 			Path:   "/api/custom/stargazers/toggleStar",
