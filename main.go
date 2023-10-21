@@ -33,10 +33,13 @@ func main() {
 					return apis.NewNotFoundError("Tune not found", nil)
 				}
 
-				apis.EnrichRecord(c, app.Dao(), record, "author")
+				if err := apis.EnrichRecord(c, app.Dao(), record, "author"); err != nil {
+					return err
+				}
 
 				return c.JSON(http.StatusOK, record)
 			},
+
 			Middlewares: []echo.MiddlewareFunc{
 				apis.ActivityLogger(app),
 			},
@@ -134,6 +137,10 @@ func main() {
 
 				// fetch again and return current state
 				tune, _err := app.Dao().FindFirstRecordByData(tunesCollectionName, "id", stargazer.Tune)
+
+				if _err != nil {
+					return apis.NewNotFoundError("Tune not found", nil)
+				}
 
 				return c.JSON(http.StatusOK, map[string]any{
 					"stars":     tune.Get("stars").(float64),
