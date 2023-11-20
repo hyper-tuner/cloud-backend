@@ -2,6 +2,7 @@ package migrations
 
 import (
 	"encoding/json"
+	"fmt"
 
 	"github.com/pocketbase/dbx"
 	"github.com/pocketbase/pocketbase/daos"
@@ -16,7 +17,8 @@ func init() {
 
 		collection, err := dao.FindCollectionByNameOrId("users")
 		if err != nil {
-			return err
+      fmt.Println("collection users not found")
+			return nil
 		}
 
 		collection.ListRule = nil
@@ -87,7 +89,12 @@ func init() {
 		}`), edit_avatar)
 		collection.Schema.AddField(edit_avatar)
 
-		return dao.SaveCollection(collection)
+		error := dao.SaveCollection(collection)
+    if error != nil {
+      fmt.Println(error)
+    }
+
+    return nil
 	}, func(db dbx.Builder) error {
 		dao := daos.New(db);
 
