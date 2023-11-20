@@ -14,7 +14,7 @@ func init() {
 	m.Register(func(db dbx.Builder) error {
 		dao := daos.New(db);
 
-		collection, err := dao.FindCollectionByNameOrId("_pb_users_auth_")
+		collection, err := dao.FindCollectionByNameOrId("users")
 		if err != nil {
 			return err
 		}

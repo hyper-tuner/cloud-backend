@@ -2,6 +2,7 @@ package migrations
 
 import (
 	"encoding/json"
+	"fmt"
 
 	"github.com/pocketbase/dbx"
 	"github.com/pocketbase/pocketbase/daos"
@@ -11,6 +12,14 @@ import (
 
 func init() {
 	m.Register(func(db dbx.Builder) error {
+    		dao := daos.New(db);
+		_, err := dao.FindCollectionByNameOrId("9eif9v40b0uw9l8")
+
+		if err == nil {
+			fmt.Println("collection stargazers already exists")
+			return nil
+		}
+
 		jsonData := `{
 			"id": "z8cojwcvlyxxyll",
 			"created": "2023-11-20 10:50:08.921Z",
