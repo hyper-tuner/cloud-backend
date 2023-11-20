@@ -5,3 +5,4 @@ run:
 issues:
   exclude:
     - Error return value of `e.Router.AddRoute` is not checked
+  path: migrations/
