@@ -26,6 +26,7 @@ go.work
 # pb_data and backups
 /backup
 /pb_data
+/pb_data_backup
 /pb_data.zip
 /pb_data.tar.gz
 
